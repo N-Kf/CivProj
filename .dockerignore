@@ -1,0 +1,16 @@
+.git
+.venv
+.local
+**/node_modules
+**/dist
+**/__pycache__
+**/.pytest_cache
+**/test-results
+**/playwright-report
+**/*.sqlite3*
+**/*.log
+**/*.tsbuildinfo
+backend/data
+.env
+.env.*
+!/.env.example

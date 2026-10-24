@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: civproj
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    autoDeploy: false
+    disk:
+      name: civproj-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: CIVPROJ_DB
+        value: /var/data/civproj.sqlite3
+      - key: CIVPROJ_STATIC_DIR
+        value: /app/frontend/dist
+      - key: CIVPROJ_SECURE_COOKIE
+        value: "1"

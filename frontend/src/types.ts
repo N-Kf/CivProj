@@ -1,0 +1,11 @@
+export type Locale = 'en' | 'ar' | 'fa';
+export type Role = 'ceo' | 'cfo' | 'cto' | 'manager' | 'accountant' | 'customer';
+export type Tenant = {id: string; name: string; role: Role};
+export type User = {id: string; name: string; email: string; tenants: Tenant[]};
+export type Category = 'site' | 'structure' | 'materials' | 'labor' | 'equipment' | 'subcontract' | 'overhead';
+export const categories: Category[] = ['site','structure','materials','labor','equipment','subcontract','overhead'];
+export type Totals = {budget: string; committed: string; actual: string; paid: string; retention: string; remaining_commitment: string; forecast: string; variance: string; payable: string};
+export type Project = Totals & {id: string; name: string; client: string; location: string; currency: string; pending_count: number; entry_count: number; categories: (Totals & {category: Category})[]; trend: {month: string; invoice: string; payment: string}[]};
+export type Entry = {id: string; project_id: string; kind: 'commitment' | 'invoice' | 'payment'; category: Category; description: string; vendor: string; reference: string; quantity: string; unit: string; unit_price: string; tax_rate: string; retention_rate: string; net: string; tax: string; amount: string; retention: string; date: string; status: 'pending' | 'approved' | 'rejected'; related_id: string | null; created_by: string; creator_name: string; created_at: string; decided_by: string | null; decided_at: string | null};
+export type Audit = {id: number; action: string; actor_name: string; created_at: string; entity_id: string; detail: Record<string, unknown>};
+export type Member = {id: string; name: string; email: string; role: Role};

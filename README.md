@@ -4,6 +4,8 @@ A working first release for civil and construction **cost control, approvals, an
 
 For browser-only access without installing programming tools, see [Cloud hosting](docs/cloud-hosting.md). The included Render Blueprint builds and hosts both the UI and API with persistent storage; deployment requires a hosting account and approval of the host's charges.
 
+To evaluate the interface without any backend, [demo/index.html](demo/index.html) is a self-contained interactive preview. It uses fictional in-memory data and resets on reload; it is separate from the real Python application. See [preview details](demo/README.md).
+
 ## Run locally
 
 Requires Python 3.12+, Node.js 22.12+ (Node 24 recommended), npm, and a Linux/macOS shell.

@@ -1,5 +1,6 @@
 import type {Locale} from './types';
 const en = {
+  browserDemoNotice:'Interactive demonstration · sample data only. Changes stay in this tab and reset on reload. No real accounts or payments.',switchRole:'Try a stakeholder role',resetDemo:'Reset demonstration',
   unit:'Unit', each:'Each', ls:'Lump sum', m:'m', m2:'m²', m3:'m³', kg:'kg', t:'tonne', hr:'Hour', day:'Day',
   tagline:'Build with clarity.', workspace:'WORKSPACE', overview:'Overview', projects:'Projects', costs:'Cost register', approvals:'Approvals', reports:'Reports', audit:'Audit trail', team:'People & access',
   overviewSub:'Every cost. Every decision. A clearer view of your project.', costsSub:'A connected record of commitments, invoices, and payments.', approvalsSub:'Review financial submissions before they affect your project.', reportsSub:'The right financial picture, ready to share.', auditSub:'Follow the people, decisions, and numbers behind every change.', teamSub:'Give each stakeholder the access they need.', projectsSub:'Your portfolio, with each project’s finances kept distinct.',
@@ -21,6 +22,7 @@ const en = {
 };
 type Key = keyof typeof en;
 const ar: Record<Key,string> = {
+  browserDemoNotice:'عرض تفاعلي ببيانات تجريبية فقط. التغييرات في علامة التبويب هذه وتُحذف عند إعادة التحميل. لا حسابات أو مدفوعات حقيقية.',switchRole:'جرّب دورًا',resetDemo:'إعادة ضبط العرض',
   unit:'الوحدة',each:'قطعة',ls:'مقطوعية',m:'م',m2:'م²',m3:'م³',kg:'كغ',t:'طن',hr:'ساعة',day:'يوم',
   tagline:'نبني برؤية واضحة.',workspace:'مساحة العمل',overview:'نظرة عامة',projects:'المشاريع',costs:'سجل التكاليف',approvals:'الموافقات',reports:'التقارير',audit:'سجل التدقيق',team:'الأشخاص والصلاحيات',
   overviewSub:'كل تكلفة وكل قرار، لرؤية أوضح لمشروعك.',costsSub:'سجل مترابط للالتزامات والفواتير والمدفوعات.',approvalsSub:'راجع الطلبات المالية قبل اعتمادها في المشروع.',reportsSub:'صورة مالية واضحة وجاهزة للمشاركة.',auditSub:'تتبع الأشخاص والقرارات والأرقام وراء كل تغيير.',teamSub:'امنح كل صاحب مصلحة الصلاحيات المناسبة.',projectsSub:'محفظة مشاريعك مع فصل الحسابات لكل مشروع.',
@@ -34,6 +36,7 @@ const ar: Record<Key,string> = {
   'project.created':'إنشاء مشروع','budget.revised':'تعديل الميزانية','commitment.submitted':'إرسال التزام','invoice.submitted':'إرسال فاتورة','payment.submitted':'إرسال دفعة','commitment.approved':'اعتماد التزام','invoice.approved':'اعتماد فاتورة','payment.approved':'اعتماد دفعة','commitment.rejected':'رفض التزام','invoice.rejected':'رفض فاتورة','payment.rejected':'رفض دفعة',
 };
 const fa: Record<Key,string> = {
+  browserDemoNotice:'نمایش تعاملی با داده‌های نمونه؛ تغییرات فقط در همین تب هستند و با بارگذاری مجدد پاک می‌شوند. حساب و پرداخت واقعی وجود ندارد.',switchRole:'تغییر نقش برای آزمایش',resetDemo:'شروع دوباره نمایش',
   unit:'واحد',each:'عدد',ls:'مقطوع',m:'متر',m2:'متر مربع',m3:'متر مکعب',kg:'کیلوگرم',t:'تن',hr:'ساعت',day:'روز',
   tagline:'با دید روشن بسازید.',workspace:'فضای کاری',overview:'نمای کلی',projects:'پروژه‌ها',costs:'دفتر هزینه‌ها',approvals:'تأییدها',reports:'گزارش‌ها',audit:'ردپای حسابرسی',team:'افراد و دسترسی',overviewSub:'هر هزینه، هر تصمیم؛ تصویری روشن‌تر از پروژه شما.',costsSub:'ثبت پیوسته تعهدها، صورت‌حساب‌ها و پرداخت‌ها.',approvalsSub:'درخواست‌های مالی را پیش از اثرگذاری بر پروژه بررسی کنید.',reportsSub:'تصویری دقیق از وضعیت مالی، آماده اشتراک‌گذاری.',auditSub:'افراد، تصمیم‌ها و ارقام پشت هر تغییر را دنبال کنید.',teamSub:'به هر ذی‌نفع دسترسی مناسب بدهید.',projectsSub:'سبد پروژه‌های شما با حساب‌های مجزا برای هر پروژه.',
   newProject:'پروژه جدید',newEntry:'افزودن رکورد هزینه',export:'خروجی CSV',today:'تا تاریخ',allProjects:'همه پروژه‌ها',project:'پروژه',client:'کارفرما',location:'موقعیت',currency:'واحد پول',projectName:'نام پروژه',name:'نام کامل',email:'ایمیل',password:'رمز عبور',organization:'سازمان',budget:'بودجه مصوب',actual:'هزینه واقعی',paid:'پرداخت‌های انجام‌شده',forecast:'هزینه و تعهدات',variance:'مانده بودجه',committed:'تعهدات',retention:'مبلغ نگهداشت',payable:'مانده قابل پرداخت',remaining:'تعهدات باز',budgetHint:'تخصیص فعلی ردیف‌های هزینه',actualHint:'صورت‌حساب‌های تأییدشده با مالیات',paidHint:'پرداخت‌های تأییدشده بابت صورت‌حساب‌ها',forecastHint:'هزینه واقعی + تعهدات باز',varianceHint:'بودجه منهای هزینه و تعهدات',

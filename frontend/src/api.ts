@@ -2,6 +2,11 @@ export class ApiError extends Error {
   constructor(public status: number, message: string) {super(message);}
 }
 export async function api<T>(path: string, body?: unknown, signal?: AbortSignal): Promise<T> {
+  if (import.meta.env.VITE_BROWSER_DEMO === 'true') {
+    const {demoApi} = await import('./browserDemo');
+    if (signal?.aborted) throw new DOMException('Aborted','AbortError');
+    return demoApi<T>(path,body);
+  }
   const response = await fetch(`/api${path}`, {method: body === undefined ? 'GET' : 'POST', credentials: 'include', headers: {'Content-Type': 'application/json'}, ...(body === undefined ? {} : {body: JSON.stringify(body)}), signal});
   if (!response.ok) {
     const data = await response.json().catch(() => ({}));
